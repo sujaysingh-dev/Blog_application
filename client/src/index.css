@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+/* hero section */
+.blob {
+  top: 30%;
+  right: 3%;
+  aspect-ratio: 1;
+  position: absolute;
+  clip-path: shape(from 82.03% 69.88%,curve to 76.23% 78.71% with 78.27% 73.39%,curve to 69.94% 88.11% with 74.19% 84.04%,curve to 59.89% 92.77% with 65.69% 92.19%,curve to 48.97% 89.90% with 54.10% 93.36%,curve to 38.80% 85.96% with 43.84% 86.45%,curve to 25.99% 86.94% with 33.76% 85.47%,curve to 15.32% 82.56% with 18.22% 88.41%,curve to 8.13% 71.94% with 12.41% 76.71%,curve to 5.60% 60.60% with 3.84% 67.17%,curve to 4.53% 47.93% with 7.37% 54.03%,curve to 3.72% 35.78% with 1.70% 41.83%,curve to 10.60% 25.58% with 5.75% 29.74%,curve to 18.98% 16.36% with 15.44% 21.41%,curve to 28.30% 9.28% with 22.51% 11.31%,curve to 40.05% 7.45% with 34.10% 7.24%,curve to 51.40% 8.72% with 46.00% 7.66%,curve to 62.82% 9.31% with 56.80% 9.77%,curve to 72.51% 13.60% with 68.84% 8.86%,curve to 77.61% 23.85% with 76.19% 18.34%,curve to 81.26% 33.45% with 79.04% 29.36%,curve to 90.46% 41.53% with 83.48% 37.55%,curve to 92.53% 50.94% with 97.43% 45.52%,curve to 86.71% 61.37% with 87.63% 56.36%,curve to 82.03% 69.88% with 85.79% 66.38%);
+  background-color: rgba(216, 216, 216, 0.415);
+  animation: updown 3s linear infinite;
+}
+
+.blob1 {
+  top: 20%;
+  left: 6%;
+  aspect-ratio: 1;
+  position: absolute;
+  --s: 150px; 
+  aspect-ratio: 1;
+  --g:/calc(var(--s)*0.333) calc(var(--s)*0.333) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+  mask: calc(50% + var(--s)*0.292) calc(50% + var(--s)*0.161) var(--g),calc(50% + var(--s)*-0.285) calc(50% + var(--s)*0.173) var(--g),calc(50% + var(--s)*-0.007) calc(50% + var(--s)*-0.333) var(--g),radial-gradient(calc(var(--s)*0.289),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.007) calc(50% + var(--s)*0.333) var(--g),calc(50% + var(--s)*-0.292) calc(50% + var(--s)*-0.161) var(--g),calc(50% + var(--s)*0.285) calc(50% + var(--s)*-0.173) var(--g);
+  background-color: rgba(203, 203, 203, 0.321);
+  animation: updown1 4s linear infinite;
+}
+
+@keyframes updown {
+  0% { transform: translateY(0); }
+  50% { transform: translate3d(10px, 30px, 0px); }
+  100% { transform: translateY(0); }
+}
+@keyframes updown1 {
+  0% { transform: translateY(0); rotate: 120deg; }
+  50% { transform: translateY(50px); rotate: 220deg; }
+  100% { transform: translateY(0); rotate: 360deg;}
+}
+
+@media (max-width: 600px) {
+  .hero-p{
+    width: 100%;
+  }
+}
+@media (max-width: 280px) {
+  .header-login{
+    display: none;
+  }
+}
+
